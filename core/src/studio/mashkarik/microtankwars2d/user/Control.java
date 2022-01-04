@@ -33,8 +33,8 @@ public class Control {
 
     private boolean isFire = false;
 
-    Texture fireTexture;
-    Texture fireTextureDown;
+    private final Texture fireTexture;
+    private final Texture fireTextureDown;
 
     public Control(Tank tankUser, Stage stage) {
 

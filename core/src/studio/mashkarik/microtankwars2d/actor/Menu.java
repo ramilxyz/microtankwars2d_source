@@ -57,9 +57,9 @@ public class Menu extends Table {
     public Label labelExit;
     public Label labelLoad;
     public Label label;
-    ParticleEffect effect;
-    ParticleEffect effect1;
-    ParticleEffect effect2;
+    private ParticleEffect effect;
+    private ParticleEffect effect1;
+    private ParticleEffect effect2;
     private Image newGame;
     private Image goldBlue;
     private Image goldRed;

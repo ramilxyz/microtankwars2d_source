@@ -6,12 +6,10 @@ import studio.mashkarik.microtankwars2d.actor.Grid;
 import studio.mashkarik.microtankwars2d.screen.GameScreen;
 
 public class Respawn {
-    Grid grid;
-    int position;
-
-    String direction;
-
-    ArrayList<Integer> moveBuffer = new ArrayList<>();
+    private final Grid grid;
+    private int position;
+    private final String direction;
+    private final ArrayList<Integer> moveBuffer = new ArrayList<>();
 
     public Respawn(Grid gird, int position, String direction) {
         this.grid = gird;

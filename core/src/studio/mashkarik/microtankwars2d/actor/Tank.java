@@ -570,7 +570,7 @@ public class Tank {
     public void render(float v) {
         if (bullet != null) {
 
-            if (bullet.getDestory()) {
+            if (bullet.getDestroy()) {
                 bullet.clear();
                 bullet = null;
 

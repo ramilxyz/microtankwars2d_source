@@ -49,11 +49,11 @@ public class EditorScreen implements Screen {
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,},
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,},
             {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 70, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,},};
-    Stage stage;
-    Game game;
-    ArrayList<Integer> arrayBlueTank = new ArrayList<>(Arrays.asList(50, 60, 70, 80, 85));
-    ArrayList<Integer> arrayRedTank = new ArrayList<>(Arrays.asList(10, 20, 30, 40, 45));
-    int value = -1;
+    private final Stage stage;
+    private final Game game;
+    private final ArrayList<Integer> arrayBlueTank = new ArrayList<>(Arrays.asList(50, 60, 70, 80, 85));
+    private final ArrayList<Integer> arrayRedTank = new ArrayList<>(Arrays.asList(10, 20, 30, 40, 45));
+    private int value = -1;
 
     public EditorScreen(Game game, Stage stage) {
         this.game = game;

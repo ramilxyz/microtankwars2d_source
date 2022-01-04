@@ -11,7 +11,7 @@ public class Bush {
 
     private final Grid grid;
     private final Color type;
-    ArrayList<Integer> moveBuffer = new ArrayList<>();
+    private final ArrayList<Integer> moveBuffer = new ArrayList<>();
     private int position;
     private boolean anim = true;
     private float animation_time = 0;

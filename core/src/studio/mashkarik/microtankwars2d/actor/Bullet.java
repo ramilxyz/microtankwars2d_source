@@ -81,7 +81,6 @@ public class Bullet {
                             GameScreen.blue = GameScreen.blue + GameScreen.WIN_SCORE;
                         }
 
-
                         if (grid.table[positionStart].getColor().equals(GameScreen.FLAG_BLUE))
                             GameScreen.red = GameScreen.red + GameScreen.WIN_SCORE;
                         clear = true;
@@ -407,7 +406,7 @@ public class Bullet {
         clear = true;
     }
 
-    boolean getDestory() {
+    boolean getDestroy() {
         if (clear) {
             return destroyBullet;
         } else return false;
