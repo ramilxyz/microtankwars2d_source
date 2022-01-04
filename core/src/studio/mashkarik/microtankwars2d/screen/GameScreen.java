@@ -57,7 +57,6 @@ public class GameScreen implements Screen {
     public static Color FLAG_RED = new Color(200 / 255f, 0, 0f, 0.8f);
 
     public static Color FLAG_GREY = new Color(170 / 255f, 170 / 255f, 170 / 255f, 1f);
-    public static Color FIELD_COLOR = new Color(24 / 255f, 158 / 255f, 33 / 255f, 1f);
 
     public static Color USER_TANK_COLOR_RED = new Color(230 / 255f, 100 / 255f, 45 / 255f, 1f);
     public static Color RESPAWN_USER_RED_COLOR = new Color(230 / 255f, 100 / 255f, 45 / 255f, 0.5f);
@@ -75,8 +74,6 @@ public class GameScreen implements Screen {
 
     public static int RED_SCORE = 0;
     public static int BLUE_SCORE = 0;
-
-    public static int HIGHSCORE = 0;
 
     public static boolean SELECT_MAP = false;
 
@@ -110,7 +107,6 @@ public class GameScreen implements Screen {
     private float victory_t;
     private Label labelBlue;
     private Label labelRed;
-
 
     public GameScreen(Game game, Stage stage) {
         GameScreen gameScreen = this;
@@ -154,20 +150,20 @@ public class GameScreen implements Screen {
 
         labelBlueVictory = new Label("victory", labelStyleBlueBig);
         labelBlueVictory.setName("label");
-        labelBlueVictory.setPosition(312, 180);
+        labelBlueVictory.setPosition(355, 230);
         labelBlueVictory.setVisible(false);
         stage.addActor(labelBlueVictory);
 
         labelRedVictory = new Label("victory", labelStyleRedBig);
         labelRedVictory.setName("label");
-        labelRedVictory.setPosition(312, 180);
+        labelRedVictory.setPosition(355, 230);
         labelRedVictory.setVisible(false);
         stage.addActor(labelRedVictory);
 
         labelTie = new Label("   Tie", labelStyleGoldBig);
         labelTie.setName("label");
-        labelTie.setPosition(262, 180);
-        labelTie.setVisible(false);
+        labelTie.setPosition(360, 230);
+        labelTie.setVisible(true);
         stage.addActor(labelTie);
 
         labelBlue = new Label("", labelStyleBlue);
@@ -254,13 +250,11 @@ public class GameScreen implements Screen {
         stage.addActor(roundThreeBlueLabel);
         stage.addActor(roundThreeLabelDiff);
 
-
         int horizontalPointCount = 0;
 
         for (int i = 0; i < ARRAY_SIZE; i++) {
 
             horizontalPointCount++;
-
 
             if (i <= TABLE_ROW_SIZE) {
                 borderArray.add(i);
@@ -539,18 +533,12 @@ public class GameScreen implements Screen {
             grid.table[i].setColor(Color.CLEAR);
         }
         if (GameScreen.TEAM_TYPE != -1) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    final Parser[] parser = {new Parser(grid, GameScreen.MAP)};
-                    Gdx.app.postRunnable(new Runnable() {
-                        @Override
-                        public void run() {
-                            GameScreen.parser = parser[0];
-                            parser[0] = null;
-                        }
-                    });
-                }
+            new Thread(() -> {
+                final Parser[] parser = {new Parser(grid, GameScreen.MAP)};
+                Gdx.app.postRunnable(() -> {
+                    GameScreen.parser = parser[0];
+                    parser[0] = null;
+                });
             }).start();
         }
 

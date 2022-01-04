@@ -37,10 +37,6 @@ public class Bullet {
 
                         if (grid.table[positionStart].getColor().equals(GameScreen.FLAG_RED)) {
                             GameScreen.blue = GameScreen.blue + GameScreen.WIN_SCORE;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_BLUE)) {
-                                MicroTankWarsGame.preferences.putInteger("numberofflagsdestroyed", MicroTankWarsGame.preferences.getInteger("numberofflagsdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
                         if (grid.table[positionStart].getColor().equals(GameScreen.FLAG_BLUE))
                             GameScreen.red = GameScreen.red + GameScreen.WIN_SCORE;
@@ -55,10 +51,6 @@ public class Bullet {
                             || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_RED)) {
                         if (grid.table[positionStart].getColor().equals(GameScreen.COLORRED) || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_RED)) {
                             GameScreen.blue++;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_BLUE)) {
-                                MicroTankWarsGame.preferences.putInteger("numberoftanksdestroyed", MicroTankWarsGame.preferences.getInteger("numberoftanksdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
                         clear = true;
                         destroyBullet = true;
@@ -87,10 +79,6 @@ public class Bullet {
                     if (grid.table[positionStart].getColor().equals(GameScreen.FLAG_RED) || grid.table[positionStart].getColor().equals(GameScreen.FLAG_BLUE)) {
                         if (grid.table[positionStart].getColor().equals(GameScreen.FLAG_RED)) {
                             GameScreen.blue = GameScreen.blue + GameScreen.WIN_SCORE;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_BLUE)) {
-                                MicroTankWarsGame.preferences.putInteger("numberofflagsdestroyed", MicroTankWarsGame.preferences.getInteger("numberofflagsdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
 
 
@@ -107,10 +95,6 @@ public class Bullet {
                             || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_RED)) {
                         if (grid.table[positionStart].getColor().equals(GameScreen.COLORRED) || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_RED)) {
                             GameScreen.blue++;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_BLUE)) {
-                                MicroTankWarsGame.preferences.putInteger("numberoftanksdestroyed", MicroTankWarsGame.preferences.getInteger("numberoftanksdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
                         clear = true;
                         destroyBullet = true;
@@ -143,10 +127,6 @@ public class Bullet {
                     if (grid.table[positionStart].getColor().equals(GameScreen.FLAG_RED) || grid.table[positionStart].getColor().equals(GameScreen.FLAG_BLUE)) {
                         if (grid.table[positionStart].getColor().equals(GameScreen.FLAG_RED)) {
                             GameScreen.blue = GameScreen.blue + GameScreen.WIN_SCORE;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_BLUE)) {
-                                MicroTankWarsGame.preferences.putInteger("numberofflagsdestroyed", MicroTankWarsGame.preferences.getInteger("numberofflagsdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
                         if (grid.table[positionStart].getColor().equals(GameScreen.FLAG_BLUE))
                             GameScreen.red = GameScreen.red + GameScreen.WIN_SCORE;
@@ -161,10 +141,6 @@ public class Bullet {
                             || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_RED)) {
                         if (grid.table[positionStart].getColor().equals(GameScreen.COLORRED) || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_RED)) {
                             GameScreen.blue++;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_BLUE)) {
-                                MicroTankWarsGame.preferences.putInteger("numberoftanksdestroyed", MicroTankWarsGame.preferences.getInteger("numberoftanksdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
                         clear = true;
                         destroyBullet = true;
@@ -193,10 +169,6 @@ public class Bullet {
                     if (grid.table[positionStart].getColor().equals(GameScreen.FLAG_RED) || grid.table[positionStart].getColor().equals(GameScreen.FLAG_BLUE)) {
                         if (grid.table[positionStart].getColor().equals(GameScreen.FLAG_RED)) {
                             GameScreen.blue = GameScreen.blue + GameScreen.WIN_SCORE;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_BLUE)) {
-                                MicroTankWarsGame.preferences.putInteger("numberofflagsdestroyed", MicroTankWarsGame.preferences.getInteger("numberofflagsdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
                         if (grid.table[positionStart].getColor().equals(GameScreen.FLAG_BLUE))
                             GameScreen.red = GameScreen.red + GameScreen.WIN_SCORE;
@@ -211,10 +183,6 @@ public class Bullet {
                             || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_RED)) {
                         if (grid.table[positionStart].getColor().equals(GameScreen.COLORRED) || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_RED)) {
                             GameScreen.blue++;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_BLUE)) {
-                                MicroTankWarsGame.preferences.putInteger("numberoftanksdestroyed", MicroTankWarsGame.preferences.getInteger("numberoftanksdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
                         clear = true;
                         destroyBullet = true;
@@ -253,10 +221,6 @@ public class Bullet {
                             GameScreen.blue = GameScreen.blue + GameScreen.WIN_SCORE;
                         if (grid.table[positionStart].getColor().equals(GameScreen.FLAG_BLUE)) {
                             GameScreen.red = GameScreen.red + GameScreen.WIN_SCORE;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_RED)) {
-                                MicroTankWarsGame.preferences.putInteger("numberofflagsdestroyed", MicroTankWarsGame.preferences.getInteger("numberofflagsdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
                         clear = true;
                         destroyBullet = true;
@@ -268,10 +232,6 @@ public class Bullet {
                             || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_BLUE)) {
                         if (grid.table[positionStart].getColor().equals(GameScreen.COLORBLUE) || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_BLUE)) {
                             GameScreen.red++;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_RED)) {
-                                MicroTankWarsGame.preferences.putInteger("numberoftanksdestroyed", MicroTankWarsGame.preferences.getInteger("numberoftanksdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
                         clear = true;
                         destroyBullet = true;
@@ -299,10 +259,6 @@ public class Bullet {
                             GameScreen.blue = GameScreen.blue + GameScreen.WIN_SCORE;
                         if (grid.table[positionStart].getColor().equals(GameScreen.FLAG_BLUE)) {
                             GameScreen.red = GameScreen.red + GameScreen.WIN_SCORE;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_RED)) {
-                                MicroTankWarsGame.preferences.putInteger("numberofflagsdestroyed", MicroTankWarsGame.preferences.getInteger("numberofflagsdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
                         clear = true;
                         destroyBullet = true;
@@ -315,10 +271,6 @@ public class Bullet {
                             || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_BLUE)) {
                         if (grid.table[positionStart].getColor().equals(GameScreen.COLORBLUE) || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_BLUE)) {
                             GameScreen.red++;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_RED)) {
-                                MicroTankWarsGame.preferences.putInteger("numberoftanksdestroyed", MicroTankWarsGame.preferences.getInteger("numberoftanksdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
                         clear = true;
                         destroyBullet = true;
@@ -353,10 +305,6 @@ public class Bullet {
                             GameScreen.blue = GameScreen.blue + GameScreen.WIN_SCORE;
                         if (grid.table[positionStart].getColor().equals(GameScreen.FLAG_BLUE)) {
                             GameScreen.red = GameScreen.red + GameScreen.WIN_SCORE;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_RED)) {
-                                MicroTankWarsGame.preferences.putInteger("numberofflagsdestroyed", MicroTankWarsGame.preferences.getInteger("numberofflagsdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
                         clear = true;
                         destroyBullet = true;
@@ -369,10 +317,6 @@ public class Bullet {
                             || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_BLUE)) {
                         if (grid.table[positionStart].getColor().equals(GameScreen.COLORBLUE) || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_BLUE)) {
                             GameScreen.red++;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_RED)) {
-                                MicroTankWarsGame.preferences.putInteger("numberoftanksdestroyed", MicroTankWarsGame.preferences.getInteger("numberoftanksdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
                         clear = true;
                         destroyBullet = true;
@@ -406,10 +350,6 @@ public class Bullet {
                             GameScreen.blue = GameScreen.blue + GameScreen.WIN_SCORE;
                         if (grid.table[positionStart].getColor().equals(GameScreen.FLAG_BLUE)) {
                             GameScreen.red = GameScreen.red + GameScreen.WIN_SCORE;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_RED)) {
-                                MicroTankWarsGame.preferences.putInteger("numberofflagsdestroyed", MicroTankWarsGame.preferences.getInteger("numberofflagsdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
                         clear = true;
                         destroyBullet = true;
@@ -422,10 +362,6 @@ public class Bullet {
                             || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_BLUE)) {
                         if (grid.table[positionStart].getColor().equals(GameScreen.COLORBLUE) || grid.table[positionStart].getColor().equals(GameScreen.USER_TANK_COLOR_BLUE)) {
                             GameScreen.red++;
-                            if (typeTank.equals(GameScreen.USER_TANK_COLOR_RED)) {
-                                MicroTankWarsGame.preferences.putInteger("numberoftanksdestroyed", MicroTankWarsGame.preferences.getInteger("numberoftanksdestroyed") + 1);
-                                MicroTankWarsGame.preferences.flush();
-                            }
                         }
                         clear = true;
                         destroyBullet = true;

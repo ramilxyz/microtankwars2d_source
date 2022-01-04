@@ -327,7 +327,6 @@ public class EditorScreen implements Screen {
         Gdx.input.setCatchKey(Input.Keys.BACK, true);
     }
 
-
     @Override
     public void show() {
 
@@ -379,7 +378,6 @@ public class EditorScreen implements Screen {
         stage.act(Gdx.graphics.getDeltaTime());
         stage.draw();
     }
-
 
     @Override
     public void resize(int i, int i1) {

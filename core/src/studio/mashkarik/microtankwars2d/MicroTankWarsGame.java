@@ -28,33 +28,12 @@ public class MicroTankWarsGame extends Game {
     public void create() {
         preferences = Gdx.app.getPreferences("microtankwars");
 
-        if (!preferences.contains("numberoftanksdestroyed")) {
-            preferences.putInteger("numberoftanksdestroyed", 0);
-            preferences.flush();
-        }
-
-        if (!preferences.contains("numberofflagsdestroyed")) {
-            preferences.putInteger("numberofflagsdestroyed", 0);
-            preferences.flush();
-        }
-
         if (!preferences.contains("sound")) {
             preferences.putBoolean("sound", true);
             preferences.flush();
         }
 
-        if (!preferences.contains("highscore")) {
-            preferences.putInteger("highscore", 0);
-            preferences.flush();
-        }
-
-        if (!preferences.contains("control")) {
-            preferences.putBoolean("control", false);
-            preferences.flush();
-        }
-
         click = Gdx.audio.newSound(Gdx.files.internal("sound/select.wav"));
-
 
         initializeView();
         setScreen(new GameScreen(this, stage));
