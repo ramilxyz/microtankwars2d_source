@@ -89,9 +89,9 @@ public class GameScreen implements Screen {
     public static float tvictory = 0;
     private static Parser parser;
     private final Stage stage;
-    float t = 0;
-    float loadingAnimation_t;
-    Menu menu;
+    private float t = 0;
+    private float loadingAnimation_t;
+    private Menu menu;
     private boolean round = false;
     private Label.LabelStyle labelStyleBlueBig;
     private Label.LabelStyle labelStyleRedBig;
