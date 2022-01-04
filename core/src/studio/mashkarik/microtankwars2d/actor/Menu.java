@@ -831,7 +831,7 @@ public class Menu extends Table {
             public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
                 super.touchUp(event, x, y, pointer, button);
                 exit.setColor(exit.getColor().r, exit.getColor().g, exit.getColor().b, 1);
-                Gdx.app.exit();
+                System.exit(0);
             }
 
             @Override
