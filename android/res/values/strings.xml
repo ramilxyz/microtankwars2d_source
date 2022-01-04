@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Micro Tank Wars 2D</string>
+    <!-- app_id -->
+    <string name="app_id" translatable="false">166180186765</string>
+    <!-- package_name -->
+    <string name="package_name" translatable="false"> studio.mashkarik.microtankwars2d</string>
+</resources>
