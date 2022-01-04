@@ -521,6 +521,10 @@ public class GameScreen implements Screen {
         if (Gdx.input.isKeyJustPressed(Input.Keys.BACK)) {
             menu.disposeVictory();
         }
+//todo для PC
+//        if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE)) {
+//            menu.disposeVictory();
+//        }
 
         stage.act(Gdx.graphics.getDeltaTime());
         stage.draw();
