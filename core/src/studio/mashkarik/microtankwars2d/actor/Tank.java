@@ -1159,7 +1159,7 @@ public class Tank {
 
                 bullet = new Bullet(moveBuffer[14] + 2, 1, type, grid);
                 if (MicroTankWarsGame.preferences.getBoolean("sound"))
-                    fireWav.play();
+                    fireWav.play(0.8f);
             }
         }
 
@@ -1170,7 +1170,7 @@ public class Tank {
                         !grid.table[(moveBuffer[10] - 3)].getColor().equals(GameScreen.BRICK_COLOR)) {
                     bullet = new Bullet(moveBuffer[10] - 2, 3, type, grid);
                     if (MicroTankWarsGame.preferences.getBoolean("sound"))
-                        fireWav.play();
+                        fireWav.play(0.8f);
                 }
             }
         }
@@ -1181,7 +1181,7 @@ public class Tank {
                         !grid.table[(moveBuffer[22] + 3 * 112)].getColor().equals(GameScreen.BRICK_COLOR)) {
                     bullet = new Bullet(moveBuffer[22] + 112 * 2, 2, type, grid);
                     if (MicroTankWarsGame.preferences.getBoolean("sound"))
-                        fireWav.play();
+                        fireWav.play(0.8f);
                 }
         }
 
@@ -1192,7 +1192,7 @@ public class Tank {
                         !grid.table[(moveBuffer[2] - 3 * 112)].getColor().equals(GameScreen.BRICK_COLOR)) {
                     bullet = new Bullet(moveBuffer[2] - 112 * 2, 4, type, grid);
                     if (MicroTankWarsGame.preferences.getBoolean("sound"))
-                        fireWav.play();
+                        fireWav.play(0.8f);
                 }
         }
     }
@@ -1307,7 +1307,7 @@ public class Tank {
     private void disposeSound() {
         if (!dispose) {
             if (MicroTankWarsGame.preferences.getBoolean("sound"))
-                tankDesposeWav.play();
+                tankDesposeWav.play(0.33f);
         }
     }
 
