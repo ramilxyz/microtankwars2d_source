@@ -113,9 +113,6 @@ public class GameScreen implements Screen {
         this.stage = stage;
         Tank tank = null;
         userControl = new Control(tank, stage);
-
-        Gdx.input.setInputProcessor(stage);
-        Gdx.input.setCatchKey(Input.Keys.BACK, true);
         initActor();
     }
 
@@ -163,7 +160,7 @@ public class GameScreen implements Screen {
         labelTie = new Label("   Tie", labelStyleGoldBig);
         labelTie.setName("label");
         labelTie.setPosition(360, 230);
-        labelTie.setVisible(true);
+        labelTie.setVisible(false);
         stage.addActor(labelTie);
 
         labelBlue = new Label("", labelStyleBlue);
