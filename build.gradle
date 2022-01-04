@@ -4,7 +4,6 @@ buildscript {
         mavenCentral()
         maven { url "https://plugins.gradle.org/m2/" }
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-
         google()
     }
     dependencies {
@@ -16,7 +15,7 @@ allprojects {
 
     version = '1.0'
     ext {
-        appName = "Micro Tank Wars"
+        appName = "Micro Tank Wars 2D"
         gdxVersion = '1.9.10'
         roboVMVersion = '2.3.8'
         box2DLightsVersion = '1.4'
@@ -27,7 +26,6 @@ allprojects {
     repositories {
         mavenLocal()
         mavenCentral()
-        jcenter()
         google()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }

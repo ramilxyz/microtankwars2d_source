@@ -42,20 +42,16 @@ import studio.mashkarik.microtankwars2d.screen.GameScreen;
 
 public class Menu extends Table {
 
-
-    public static Label highscoreLabel;
     public static Label redScoreLabel;
     public static Label blueScoreLabel;
     private final Image redTeam;
     private final Image blueTeam;
-    private final Image leaderboards;
     private final Image map;
     private final Image exit;
     private final Image load;
     private final GameScreen gameScreen;
     private final ScrollPane scrollPane;
     private final Table mapPane = new Table();
-    public Label labelLeaderboards;
     public Label labelNewGame;
     public Label labelMap;
     public Label labelExit;
@@ -77,11 +73,6 @@ public class Menu extends Table {
 
         this.gameScreen = gameScreen;
 
-        ArrayList<String> menuScrollList = new ArrayList<>();
-        menuScrollList.add("Map");
-        menuScrollList.add("NewGame");
-        menuScrollList.add("Exit");
-
         Texture menuTexture = new Texture("menu.png");
         Texture redTeamTexture = new Texture("red_team.png");
         Texture blueTeamTexture = new Texture("blue_team.png");
@@ -93,23 +84,18 @@ public class Menu extends Table {
 
         BitmapFont fontHs = new BitmapFont(Gdx.files.internal("font/24.fnt"),
                 Gdx.files.internal("font/24.png"), false);
-        Label.LabelStyle highscoreLabelStyle = new Label.LabelStyle(fontHs, Color.GOLD);
-        highscoreLabel = new Label("Highscore: 100", highscoreLabelStyle);
-        highscoreLabel.setPosition(100, 90);
-
 
         Label.LabelStyle redScoreLabelStyle = new Label.LabelStyle(fontHs, GameScreen.COLORRED);
-        redScoreLabel = new Label("Score: 100", redScoreLabelStyle);
-        redScoreLabel.setPosition(35, 330);
+        redScoreLabel = new Label("Score: 10", redScoreLabelStyle);
+        redScoreLabel.setPosition(35, 380);
 
         Label.LabelStyle blueScoreLabelStyle = new Label.LabelStyle(fontHs, Color.ROYAL);
-        blueScoreLabel = new Label("Score: 100", blueScoreLabelStyle);
-        blueScoreLabel.setPosition(250, 330);
+        blueScoreLabel = new Label("Score: 00", blueScoreLabelStyle);
+        blueScoreLabel.setPosition(297, 380);
 
 
         Label.LabelStyle labelStyle = new Label.LabelStyle(font, Color.GOLD);
 
-        labelLeaderboards = new Label("Leaderboards", labelStyle);
         labelNewGame = new Label("New Game", labelStyle);
         labelMap = new Label("Map", labelStyle);
         labelExit = new Label("Exit", labelStyle);
@@ -117,9 +103,6 @@ public class Menu extends Table {
 
         label = new Label("      ", labelStyle);
 
-
-        leaderboards = new Image(textButtonTexture);
-        leaderboards.setName("Resume");
         newGame = new Image(textButtonTexture);
         newGame.setName("NewGame");
         newGame = new Image(textButtonTexture);
@@ -130,7 +113,6 @@ public class Menu extends Table {
         exit.setName("Exit");
         load = new Image(textButtonTexture);
         load.setName("Load");
-
 
         this.setName("menu");
         TextureRegionDrawable textureRegionDrawableBg = new TextureRegionDrawable(new TextureRegion(menuTexture));
@@ -147,12 +129,9 @@ public class Menu extends Table {
 
         this.addActor(labelExit);
 
-
-        this.addActor(highscoreLabel);
         this.addActor(redScoreLabel);
         this.addActor(blueScoreLabel);
 
-        highscoreLabel.setVisible(false);
         blueScoreLabel.setVisible(false);
         redScoreLabel.setVisible(false);
 
@@ -224,11 +203,6 @@ public class Menu extends Table {
 
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-
-
-                //  playServices.signOut();
-
-
                 if (MicroTankWarsGame.preferences.getBoolean("sound"))
                     MicroTankWarsGame.click.play();
                 for (int i = 0; i < mapPane.getChildren().size; i++) {
@@ -245,9 +219,7 @@ public class Menu extends Table {
         mapOne.addListener(inputListenerOne);
         mapPane.add(mapOne).size(110, 110);
         //---------------------------------------------------------------------------------------------------------------------------------------------
-        mapPane.getColumns();
         mapPane.add(label);
-        mapPane.getColumns();
 
         final Image mapTwo = new Image(new Texture(new PixelButton(MAP_TWO)));
         mapTwo.setName("2");
@@ -279,10 +251,7 @@ public class Menu extends Table {
         mapPane.add(mapTwo).size(110, 110);
         //---------------------------------------------------------------------------------------------------------------------------------------------
 
-        mapPane.getColumns();
         mapPane.add(label);
-        mapPane.getColumns();
-
 
         final Image mapThree = new Image(new Texture(new PixelButton(MAP_THREE)));
         mapThree.setName("3");
@@ -314,7 +283,6 @@ public class Menu extends Table {
         mapPane.row();
         ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
         //======================================= 2 ====================================
         final Image mapFour2 = new Image(new Texture(new PixelButton(MAP_FOUR)));
         mapFour2.setName("4");
@@ -340,9 +308,7 @@ public class Menu extends Table {
         mapFour2.addListener(inputListenerFour2);
         mapPane.add(mapFour2).size(110, 110);
         //---------------------------------------------------------------------------------------------------------------------------------------------
-        mapPane.getColumns();
         mapPane.add(label);
-        mapPane.getColumns();
 
         final Image mapFive2 = new Image(new Texture(new PixelButton(MAP_FIVE)));
         mapFive2.setName("5");
@@ -370,9 +336,7 @@ public class Menu extends Table {
         mapPane.add(mapFive2).size(110, 110);
         //---------------------------------------------------------------------------------------------------------------------------------------------
 
-        mapPane.getColumns();
         mapPane.add(label);
-        mapPane.getColumns();
 
         final Image mapSix2 = new Image(new Texture(new PixelButton(MAP_SIX)));
         mapSix2.setName("6");
@@ -429,9 +393,7 @@ public class Menu extends Table {
         mapSeven3.addListener(inputListenerSeven3);
         mapPane.add(mapSeven3).size(110, 110);
         //---------------------------------------------------------------------------------------------------------------------------------------------
-        mapPane.getColumns();
         mapPane.add(label);
-        mapPane.getColumns();
 
         final Image mapEight3 = new Image(new Texture(new PixelButton(MAP_EIGHT)));
         mapEight3.setName("8");
@@ -459,9 +421,7 @@ public class Menu extends Table {
         mapPane.add(mapEight3).size(110, 110);
         //---------------------------------------------------------------------------------------------------------------------------------------------
 
-        mapPane.getColumns();
         mapPane.add(label);
-        mapPane.getColumns();
 
         final Image mapNine3 = new Image(new Texture(new PixelButton(MAP_NINE)));
         mapNine3.setName("9");
@@ -518,9 +478,7 @@ public class Menu extends Table {
         mapTen4.addListener(inputListenerTen4);
         mapPane.add(mapTen4).size(110, 110);
         //---------------------------------------------------------------------------------------------------------------------------------------------
-        mapPane.getColumns();
         mapPane.add(label);
-        mapPane.getColumns();
 
         final Image mapEleven4 = new Image(new Texture(new PixelButton(MAP_ELEVEN)));
         mapEleven4.setName("11");
@@ -548,10 +506,7 @@ public class Menu extends Table {
         mapPane.add(mapEleven4).size(110, 110);
         //---------------------------------------------------------------------------------------------------------------------------------------------
 
-        mapPane.getColumns();
         mapPane.add(label);
-        mapPane.getColumns();
-
 
         final Image mapTwelve4 = new Image(new Texture(new PixelButton(MAP_TWELVE)));
         mapTwelve4.setName("12");
@@ -605,7 +560,6 @@ public class Menu extends Table {
         BLUE_SCORE = 0;
         RED_SCORE = 0;
 
-        highscoreLabel.setVisible(false);
         blueScoreLabel.setVisible(false);
         redScoreLabel.setVisible(false);
 
@@ -638,22 +592,6 @@ public class Menu extends Table {
             Menu.redScoreLabel.setText("Score " + RED_SCORE);
             Menu.blueScoreLabel.setText("Score " + BLUE_SCORE);
 
-
-            if (TEAM_TYPE == 0) {
-                if (MicroTankWarsGame.preferences.getInteger("highscore") < RED_SCORE) {
-                    MicroTankWarsGame.preferences.putInteger("highscore", RED_SCORE).flush();
-                }
-            }
-
-            if (TEAM_TYPE == 1) {
-                if (MicroTankWarsGame.preferences.getInteger("highscore") < BLUE_SCORE) {
-                    MicroTankWarsGame.preferences.putInteger("highscore", BLUE_SCORE).flush();
-                }
-            }
-
-            Menu.highscoreLabel.setText(" Highscore " + MicroTankWarsGame.preferences.getInteger("highscore"));
-
-            highscoreLabel.setVisible(true);
             blueScoreLabel.setVisible(true);
             redScoreLabel.setVisible(true);
 
@@ -817,7 +755,6 @@ public class Menu extends Table {
 
                     }
                 }
-
             }
 
             @Override
@@ -894,7 +831,7 @@ public class Menu extends Table {
             public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
                 super.touchUp(event, x, y, pointer, button);
                 exit.setColor(exit.getColor().r, exit.getColor().g, exit.getColor().b, 1);
-                Gdx.app.exit();
+                System.exit(0);
             }
 
             @Override
@@ -919,33 +856,9 @@ public class Menu extends Table {
 
         labelMap.addListener(mapPlane);
 
-        InputListener inputListenerLeaderboards = new InputListener() {
-            @Override
-            public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-                super.touchUp(event, x, y, pointer, button);
-                leaderboards.setColor(leaderboards.getColor().r, leaderboards.getColor().g, leaderboards.getColor().b, 1);
-
-            }
-
-            @Override
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                if (MicroTankWarsGame.preferences.getBoolean("sound"))
-                    MicroTankWarsGame.click.play();
-
-                leaderboards.setColor(leaderboards.getColor().r, leaderboards.getColor().g, leaderboards.getColor().b, 0.5f);
-                return true;
-            }
-        };
-
-        leaderboards.addListener(inputListenerLeaderboards);
-        labelLeaderboards.addListener(inputListenerLeaderboards);
-
-
     }
 
     public void render(float v) {
-
-
         if (TEAM_TYPE == -1 && GameScreen.MAP != null) {
             redTeam.setVisible(true);
             blueTeam.setVisible(true);
@@ -978,9 +891,6 @@ public class Menu extends Table {
             labelNewGame.setVisible(visible);
             exit.setVisible(visible);
             labelExit.setVisible(visible);
-            leaderboards.setVisible(visible);
-            labelLeaderboards.setVisible(visible);
-
         } else {
             map.setVisible(false);
             labelMap.setVisible(false);
@@ -989,8 +899,6 @@ public class Menu extends Table {
             exit.setVisible(false);
             labelExit.setVisible(false);
             scrollPane.setVisible(true);
-            leaderboards.setVisible(false);
-            labelLeaderboards.setVisible(false);
 
         }
     }
@@ -998,7 +906,6 @@ public class Menu extends Table {
     private void resize() {
         this.setSize(Grid.GRID_W, Grid.GRID_H);
         this.setPosition(Grid.GRID_X, Grid.GRID_Y);
-
     }
 
     @Override
@@ -1016,7 +923,6 @@ public class Menu extends Table {
         float BUTTON_Y = (Grid.GRID_H * 163) / 440;
         float BUTTON_FONT_Y = (Grid.GRID_H * 165) / 440;
         float GAP = (Grid.GRID_H * 70) / 440;
-
 
         labelNewGame.setPosition(170, BUTTON_FONT_Y + GAP * 2);
         labelMap.setPosition(200, BUTTON_FONT_Y + GAP);

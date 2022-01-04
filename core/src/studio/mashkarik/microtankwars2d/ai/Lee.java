@@ -163,7 +163,7 @@ public class Lee {
                 Gdx.app.log("ERROR::LEE", "" + e.getMessage());
             }
 
-            grid.table[realMatrix[y][x]].setColor(Color.CYAN);
+         //   grid.table[realMatrix[y][x]].setColor(Color.CYAN);
 
             d--;
             for (k = 0; k < 4; ++k) {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="studio.mashkarik.microtankwars2d" >
 
     <application
@@ -8,14 +9,8 @@
         android:isGame="true"
         android:appCategory="game"
         android:label="@string/app_name"
-        android:theme="@style/GdxTheme" >
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/> <!--        test-->
-<!--             android:value="ca-app-pub-7417642993084234~2159421339"/> &lt;!&ndash;        prod&ndash;&gt;-->
-        <meta-data
-            android:name="com.google.android.gms.games.APP_ID"
-            android:value="@string/app_id" />
+        android:theme="@style/GdxTheme"
+        tools:targetApi="o">
         <activity
             android:name="studio.mashkarik.microtankwars2d.AndroidLauncher"
             android:label="@string/app_name" 

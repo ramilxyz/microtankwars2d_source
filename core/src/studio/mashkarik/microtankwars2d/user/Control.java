@@ -24,11 +24,7 @@ import studio.mashkarik.microtankwars2d.screen.GameScreen;
 public class Control {
     private Tank tankUser;
 
-    private Touchpad touchpad;
-    private static Touchpad.TouchpadStyle touchpadStyle;
-    private Skin touchpadSkin;
-
-    private Image fireBtn;
+    private final Image fireBtn;
 
     private boolean left = false;
     private boolean right = false;
@@ -37,16 +33,15 @@ public class Control {
 
     private boolean isFire = false;
 
-
     Texture fireTexture;
     Texture fireTextureDown;
 
     public Control(Tank tankUser, Stage stage) {
 
-        touchpadSkin = new Skin();
+        Skin touchpadSkin = new Skin();
         touchpadSkin.add("touchKnob", new Texture("touch_knob.png"));
 
-        touchpadStyle = new Touchpad.TouchpadStyle();
+        Touchpad.TouchpadStyle touchpadStyle = new Touchpad.TouchpadStyle();
         touchpadStyle.knob = touchpadSkin.getDrawable("touchKnob");;
 
         Pixmap background = new Pixmap(200, 200, Pixmap.Format.RGBA8888);
@@ -56,7 +51,7 @@ public class Control {
 
         touchpadStyle.background = new TextureRegionDrawable(new TextureRegion(new Texture(background)));
 
-        touchpad = new Touchpad(10, touchpadStyle);
+        Touchpad touchpad = new Touchpad(10, touchpadStyle);
         touchpad.setBounds(20, 170, 140, 140);
 
         touchpad.addListener(new ChangeListener() {
@@ -133,11 +128,15 @@ public class Control {
 
         stage.addActor(touchpad);
         this.tankUser = tankUser;
+
+        Gdx.input.setInputProcessor(stage);
+        Gdx.input.setCatchKey(Input.Keys.BACK, true);
     }
 
     public void render() {
         if (tankUser != null) {
-            if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE)) {
+//            if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE)) {
+            if (Gdx.input.isKeyJustPressed(Input.Keys.BACK)) {
                 if (GameScreen.MAP != null && GameScreen.TEAM_TYPE == -1) {
                     GameScreen.MAP = null;
                     GameScreen.labelGold.setText("");
