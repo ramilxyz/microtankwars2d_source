@@ -518,6 +518,10 @@ public class GameScreen implements Screen {
             labelBlue.setVisible(true);
         }
 
+        if (Gdx.input.isKeyJustPressed(Input.Keys.BACK)) {
+            menu.disposeVictory();
+        }
+
         stage.act(Gdx.graphics.getDeltaTime());
         stage.draw();
     }
